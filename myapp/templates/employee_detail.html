@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block main_block%}
+<div class="container">
+    <form action="" method="post" class="w-50 border rounded p-5 mx-auto shadow bg-warning">
+        <div class="row">
+  
+            <div class="col-4">
+                <table class="table table-striped">
+                <tr>
+                    <th>name</th>
+                        <th>designation</th>
+                        <th>department</th>
+                        <th>salary</th>
+                        <th>contact</th>
+                        <th>address</th>
+                        
+                <tr>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.designation}}</td>
+                    <td>{{employee.department}}</td>
+                    <td>{{employee.salary}}</td>
+                    <td>{{employee.contact}}</td>
+                    <td>{{employee.address}}</td>
+                </tr>
+            </table>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+{%endblock%}
+{%block script_block%}
+{%endblock%}

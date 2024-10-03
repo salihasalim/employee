@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block main_block%}
+<div class="container">
+    <form action="" method="post" class="w-50 border rounded p-5 mx-auto shadow bg-info ">
+        <h1 class="text-center mb-3 fw-bold ">Employee Registration</h1>
+            {%csrf_token%}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-dark form-control text-center">Submit</button>
+        </form>
+    </div>
+{%endblock%}
+{%block script_block%}
+{%endblock%}code 

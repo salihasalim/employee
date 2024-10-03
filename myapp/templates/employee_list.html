@@ -1,0 +1,56 @@
+
+{%extends 'base.html'%}
+{%block main_block%}
+
+
+
+    <div class="container p-3  ">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-9 border  p-8">
+                <div class="w-100 d-flex justify-content-end pb-3">
+                    <a href="{%url 'employee_add'%}" class="btn btn-primary">Add</a>
+
+                </div>
+                <center>
+                <h1 style="color: blue;">Employee Details</h1></center>
+                <table class="table table-striped p-3 bg-light">
+                    <tr>
+                        <th>name</th>
+                        <th>designation</th>
+                        <th>department</th>
+                        <th>salary</th>
+                        <th>contact</th>
+                        <th>address</th>
+                        <th class="d-grid gap-2 d-md-flex justify-content-center">Action</th>
+                    </tr>
+                    {%for e in employees%}
+                    <tr>
+                        <td>{{e.name}}</td>
+                        <td>{{e.designation}}</td>
+                        <td>{{e.department}}</td>
+                        <td>{{e.salary}}</td>
+                        <td>{{e.contact}}</td>
+                        <td>{{e.address}}</td>
+                        
+                        <td>
+
+                           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a class="btn btn-warning" href="{%url 'employee_detail' e.id %}" role="button">View</a>
+                            <a class="btn btn-danger" href="{%url 'employee_delete' e.id %}" role="button">Remove</a>
+                            <a class="btn btn-success" href="{%url 'employee_update' e.id %}" role="button">Update</a>
+
+                        </div>
+                           
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+{%endblock%}
+{%block script_block%}
+{%endblock%}
